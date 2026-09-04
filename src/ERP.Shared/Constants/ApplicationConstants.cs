@@ -5,73 +5,9 @@ namespace ERP.Shared.Constants;
 /// </summary>
 public static class ApplicationConstants
 {
-    public static class Permissions
-    {
-        // Produtos
-        public const string ProductsView = "Products.View";
-        public const string ProductsCreate = "Products.Create";
-        public const string ProductsEdit = "Products.Edit";
-        public const string ProductsDelete = "Products.Delete";
-        public const string ProductsImport = "Products.Import";
-        public const string ProductsExport = "Products.Export";
-
-        // Preços
-        public const string PricesView = "Prices.View";
-        public const string PricesEdit = "Prices.Edit";
-        public const string PricesHistoryView = "Prices.HistoryView";
-        public const string PriceTablesManage = "PriceTables.Manage";
-        public const string PriceRulesManage = "PriceRules.Manage";
-
-        // PDV/Vendas
-        public const string PosOpen = "POS.Open";
-        public const string PosSell = "POS.Sell";
-        public const string PosCancelSale = "POS.CancelSale";
-        public const string PosDiscount = "POS.Discount";
-        public const string PosChangePriceTable = "POS.ChangePriceTable";
-        public const string PosForcedPrice = "POS.ForcedPrice";
-
-        // Estoque
-        public const string InventoryView = "Inventory.View";
-        public const string InventoryAdjust = "Inventory.Adjust";
-        public const string InventoryTransfer = "Inventory.Transfer";
-        public const string InventoryCount = "Inventory.Count";
-        public const string InventoryImport = "Inventory.Import";
-        public const string InventoryExport = "Inventory.Export";
-
-        // Financeiro
-        public const string FinanceView = "Finance.View";
-        public const string FinanceReceive = "Finance.Receive";
-        public const string FinancePay = "Finance.Pay";
-        public const string FinanceReport = "Finance.Report";
-        public const string FinanceExport = "Finance.Export";
-
-        // Caixa
-        public const string CashOpen = "Cash.Open";
-        public const string CashClose = "Cash.Close";
-        public const string CashMovement = "Cash.Movement";
-        public const string CashReport = "Cash.Report";
-
-        // Clientes
-        public const string CustomersView = "Customers.View";
-        public const string CustomersCreate = "Customers.Create";
-        public const string CustomersEdit = "Customers.Edit";
-        public const string CustomersDelete = "Customers.Delete";
-        public const string CustomersCredit = "Customers.Credit";
-        public const string CustomersReport = "Customers.Report";
-
-        // Relatórios
-        public const string ReportsView = "Reports.View";
-        public const string ReportsExport = "Reports.Export";
-        public const string ReportsSchedule = "Reports.Schedule";
-
-        // Configurações
-        public const string SettingsCompany = "Settings.Company";
-        public const string SettingsSystem = "Settings.System";
-        public const string SettingsUsers = "Settings.Users";
-        public const string SettingsRoles = "Settings.Roles";
-        public const string SettingsAudit = "Settings.Audit";
-    }
-
+    /// <summary>
+    /// Roles disponíveis
+    /// </summary>
     public static class Roles
     {
         public const string Administrator = "Administrator";
@@ -83,10 +19,94 @@ public static class ApplicationConstants
         public const string Viewer = "Viewer";
     }
 
+    /// <summary>
+    /// Permissões granulares
+    /// </summary>
+    public static class Permissions
+    {
+        // Produtos
+        public const string ProductsView = "products.view";
+        public const string ProductsCreate = "products.create";
+        public const string ProductsEdit = "products.edit";
+        public const string ProductsDelete = "products.delete";
+        public const string ProductsImport = "products.import";
+        public const string ProductsExport = "products.export";
+
+        // Preços
+        public const string PricesView = "prices.view";
+        public const string PricesEdit = "prices.edit";
+        public const string PricesHistoryView = "prices.history.view";
+        public const string PriceTablesManage = "price_tables.manage";
+        public const string PriceRulesManage = "price_rules.manage";
+
+        // PDV
+        public const string PosOpen = "pos.open";
+        public const string PosSell = "pos.sell";
+        public const string PosCancelSale = "pos.cancel_sale";
+        public const string PosDiscount = "pos.discount";
+        public const string PosChangePriceTable = "pos.change_price_table";
+        public const string PosForcedPrice = "pos.forced_price";
+
+        // Estoque
+        public const string InventoryView = "inventory.view";
+        public const string InventoryAdjust = "inventory.adjust";
+        public const string InventoryTransfer = "inventory.transfer";
+        public const string InventoryCount = "inventory.count";
+        public const string InventoryImport = "inventory.import";
+        public const string InventoryExport = "inventory.export";
+
+        // Financeiro
+        public const string FinanceView = "finance.view";
+        public const string FinanceReceive = "finance.receive";
+        public const string FinancePay = "finance.pay";
+        public const string FinanceReport = "finance.report";
+        public const string FinanceExport = "finance.export";
+
+        // Caixa
+        public const string CashOpen = "cash.open";
+        public const string CashClose = "cash.close";
+        public const string CashMovement = "cash.movement";
+        public const string CashReport = "cash.report";
+
+        // Clientes
+        public const string CustomersView = "customers.view";
+        public const string CustomersCreate = "customers.create";
+        public const string CustomersEdit = "customers.edit";
+        public const string CustomersDelete = "customers.delete";
+        public const string CustomersCredit = "customers.credit";
+        public const string CustomersReport = "customers.report";
+
+        // Relatórios
+        public const string ReportsView = "reports.view";
+        public const string ReportsExport = "reports.export";
+        public const string ReportsSchedule = "reports.schedule";
+
+        // Configurações
+        public const string SettingsCompany = "settings.company";
+        public const string SettingsSystem = "settings.system";
+        public const string SettingsUsers = "settings.users";
+        public const string SettingsRoles = "settings.roles";
+        public const string SettingsAudit = "settings.audit";
+    }
+
+    /// <summary>
+    /// Usuários padrão
+    /// </summary>
     public static class DefaultUsers
     {
         public const string AdminEmail = "admin@erpsystem.com";
         public const string ManagerEmail = "manager@erpsystem.com";
         public const string CashierEmail = "cashier@erpsystem.com";
+    }
+
+    /// <summary>
+    /// Configurações de aplicação
+    /// </summary>
+    public static class Settings
+    {
+        public const int DefaultPageSize = 10;
+        public const int MaxPageSize = 100;
+        public const int PriceDecimalPlaces = 2;
+        public const int QuantityDecimalPlaces = 4;
     }
 }
